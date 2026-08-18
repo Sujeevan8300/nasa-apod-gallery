@@ -178,7 +178,7 @@ This project uses a `.env` file to keep secrets out of source code.
 ## ▶️ Running the Project
 
 1. Complete the **Database Setup** steps above.
-2. Create and fill in the **`.env` file** as described in Configuration.
+2. fill in the **`appsettings.json` file** as described in Configuration.
 3. Open a terminal in the project root and run:
 
 ```bash
