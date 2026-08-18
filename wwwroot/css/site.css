@@ -1,0 +1,76 @@
+/* ===== NASA APOD Gallery Styles ===== */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 20px 0;
+}
+
+.gallery-item {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.video-placeholder {
+    height: 220px;
+    background: #1a1a2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-placeholder a {
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 12px 24px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    transition: all 0.2s;
+}
+
+.video-placeholder a:hover {
+    background: #ffffff;
+    color: #1a1a2e;
+}
+
+.gallery-info {
+    padding: 16px;
+}
+
+.gallery-info h3 {
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+    color: #222;
+}
+
+.gallery-info .date {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}

@@ -1,0 +1,44 @@
+﻿@model List<NasaApodGallery.Models.Apod>
+
+@{
+    ViewData["Title"] = "NASA Astronomy Picture of the Day Gallery";
+}
+
+<div class="text-center mb-4">
+    <h1 class="display-5">NASA APOD Gallery</h1>
+    <p class="lead">Astronomy Pictures of the Day</p>
+</div>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-info text-center">
+        No pictures found. Please check your NASA API key or database connection.
+    </div>
+}
+else
+{
+    <div class="gallery">
+        @foreach (var item in Model)
+        {
+            <div class="gallery-item">
+                @if (item.MediaType == "image")
+                {
+                    <img src="@item.Url" alt="@item.Title" loading="lazy" />
+                }
+                else
+                {
+                    <div class="video-placeholder">
+                        <a href="@item.Url" target="_blank" rel="noopener">
+                            ▶ Watch Video
+                        </a>
+                    </div>
+                }
+
+                <div class="gallery-info">
+                    <h3>@item.Title</h3>
+                    <p class="date">@item.Date.ToString("dd MMM yyyy")</p>
+                </div>
+            </div>
+        }
+    </div>
+}
