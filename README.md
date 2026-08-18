@@ -159,7 +159,7 @@ This project uses a `.env` file to keep secrets out of source code.
 > You can use `DEMO_KEY` for quick testing (limited to 30 requests/hour).
 
 
-### Step 2 — Insert credential into `appsettings.json` for local Deployement
+### Step 2 — Insert credential's into `appsettings.json` for Local Deployement
 
 
 ```json
@@ -172,8 +172,6 @@ This project uses a `.env` file to keep secrets out of source code.
   }
 }
 ```
-
-> ⚠️ **Never** put your real API key or password directly in `appsettings.json`. The `.env` file is already in `.gitignore` and will not be committed to Git.
 
 ---
 
