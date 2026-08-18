@@ -1,29 +1,31 @@
+using System.Text.Json.Serialization;
+
 namespace NasaApodGallery.DTOs
 {
     public class ApodDto
     {
-        // The date of the picture (example: "2024-05-15")
+        [JsonPropertyName("date")]
         public string Date { get; set; }
 
-        // Title of the astronomy picture
+        [JsonPropertyName("title")]
         public string Title { get; set; }
 
-        // Long description / explanation of the picture
+        [JsonPropertyName("explanation")]
         public string Explanation { get; set; }
 
-        // URL of the image (or video)
+        [JsonPropertyName("url")]
         public string Url { get; set; }
 
-        // High resolution URL (sometimes available)
+        [JsonPropertyName("hdurl")]
         public string HdUrl { get; set; }
 
-        // "image" or "video"
+        [JsonPropertyName("media_type")]
         public string MediaType { get; set; }
 
-        // Version of the NASA service (usually "v1")
+        [JsonPropertyName("service_version")]
         public string ServiceVersion { get; set; }
 
-        // Optional - name of the copyright holder
+        [JsonPropertyName("copyright")]
         public string Copyright { get; set; }
     }
 }

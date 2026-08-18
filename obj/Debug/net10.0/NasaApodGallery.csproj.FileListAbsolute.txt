@@ -129,3 +129,4 @@
 /Users/Shared/Assessment and Practice/C# Practice/ImpactIT/NasaApodGallery/bin/Debug/net10.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
 /Users/Shared/Assessment and Practice/C# Practice/ImpactIT/NasaApodGallery/obj/Debug/net10.0/NasaApod.35CFA5E3.Up2Date
 /Users/Shared/Assessment and Practice/C# Practice/ImpactIT/NasaApodGallery/obj/Debug/net10.0/compressed/jbhchm2jwo-{0}-udkicld126-udkicld126.gz
+/Users/Shared/Assessment and Practice/C# Practice/ImpactIT/NasaApodGallery/obj/Debug/net10.0/NasaApodGallery.sourcelink.json

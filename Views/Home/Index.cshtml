@@ -1,4 +1,4 @@
-﻿@model List<NasaApodGallery.Models.Apod>
+@model List<NasaApodGallery.Models.Apod>
 
 @{
     ViewData["Title"] = "NASA Astronomy Picture of the Day Gallery";
@@ -7,6 +7,9 @@
 <div class="text-center mb-4">
     <h1 class="display-5">NASA APOD Gallery</h1>
     <p class="lead">Astronomy Pictures of the Day</p>
+    <form asp-action="Sync" method="post" class="mt-3">
+        <button type="submit" class="btn btn-primary">Sync Latest from NASA</button>
+    </form>
 </div>
 
 @if (Model == null || !Model.Any())

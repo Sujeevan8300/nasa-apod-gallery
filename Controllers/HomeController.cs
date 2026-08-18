@@ -16,6 +16,16 @@ namespace NasaApodGallery.Controllers
 
         public async Task<IActionResult> Index()
         {
+            // ONLY read from the local database for fast page loads
+            var allPictures = await _apodRepository.GetAllAsync();
+
+            // Send the list to the View (gallery page)
+            return View(allPictures);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Sync()
+        {
             // 1. Decide the date range (last 7 days including today)
             DateTime endDate = DateTime.UtcNow.Date;
             DateTime startDate = endDate.AddDays(-6);
@@ -29,11 +39,7 @@ namespace NasaApodGallery.Controllers
                 await _apodRepository.InsertIfNotExistsAsync(item);
             }
 
-            // 4. Read all pictures from the database
-            var allPictures = await _apodRepository.GetAllAsync();
-
-            // 5. Send the list to the View (gallery page)
-            return View(allPictures);
+            return RedirectToAction("Index");
         }
     }
 }

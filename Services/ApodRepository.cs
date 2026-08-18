@@ -35,9 +35,9 @@ namespace NasaApodGallery.Services
                             {
                                 Id = reader.GetInt32(0),
                                 Date = reader.GetDateTime(1),
-                                Title = reader.GetString(2),
+                                Title = reader.IsDBNull(2) ? "No Title" : reader.GetString(2),
                                 Explanation = reader.IsDBNull(3) ? null : reader.GetString(3),
-                                Url = reader.GetString(4),
+                                Url = reader.IsDBNull(4) ? "" : reader.GetString(4),
                                 MediaType = reader.IsDBNull(5) ? null : reader.GetString(5),
                                 ServiceVersion = reader.IsDBNull(6) ? null : reader.GetString(6),
                                 SavedAt = reader.GetDateTime(7)

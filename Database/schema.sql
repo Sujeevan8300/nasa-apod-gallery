@@ -1,0 +1,17 @@
+CREATE DATABASE NasaApodDb;
+GO
+
+USE NasaApodDb;
+GO
+
+CREATE TABLE Apod (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Date DATE NOT NULL,
+    Title NVARCHAR(255) NULL,
+    Explanation NVARCHAR(MAX) NULL,
+    Url NVARCHAR(MAX) NULL,
+    MediaType VARCHAR(50) NULL,
+    ServiceVersion VARCHAR(50) NULL,
+    SavedAt DATETIME NOT NULL
+);
+GO
