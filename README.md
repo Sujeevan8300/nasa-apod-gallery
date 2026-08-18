@@ -158,19 +158,9 @@ This project uses a `.env` file to keep secrets out of source code.
 
 > You can use `DEMO_KEY` for quick testing (limited to 30 requests/hour).
 
-### Step 2 — Create your `.env` file
 
-Create a file named `.env` in the project root (next to `appsettings.json`):
+### Step 2 — Insert credential into `appsettings.json` for local Deployement
 
-```env
-NASA_API_KEY=your_nasa_api_key_here
-DB_USER=sa
-DB_PASS=your_sql_password_here
-```
-
-### Step 3 — Verify `appsettings.json`
-
-The `appsettings.json` reads values from `.env` automatically. It should look like:
 
 ```json
 {
