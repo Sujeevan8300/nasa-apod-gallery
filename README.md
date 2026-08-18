@@ -120,7 +120,6 @@ Make sure you have the following installed:
   - SQL Server Express (Windows)
   - Docker with `mcr.microsoft.com/mssql/server` (Mac/Linux)
   - Azure SQL Edge (Mac Apple Silicon M1/M2/M3)
-- [Azure Data Studio](https://azure.microsoft.com/en-us/products/data-studio/) or SSMS to run the SQL script
 
 ---
 
